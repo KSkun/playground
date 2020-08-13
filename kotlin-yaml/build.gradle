@@ -1,0 +1,25 @@
+plugins {
+    id 'application'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.72'
+}
+
+group 'moe.ksmeow'
+version '1.0'
+
+application {
+    mainClassName = 'moe.ksmeow.ktyaml.KtYamlKt'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    compile group: 'org.yaml', name: 'snakeyaml', version: '1.26'
+}
+
+run {
+    defaultCharacterEncoding = "utf-8"
+    workingDir = "env"
+}
